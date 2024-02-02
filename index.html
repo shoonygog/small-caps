@@ -1,0 +1,18 @@
+<title></title>
+
+<textarea id='text_input' oninput='update_output()'></textarea>
+<textarea id='text_output' readonly></textarea>
+
+<script>
+    function update_output() {
+        document.getElementById('text_output').value = document.getElementById('text_input').value.replace(/[a-z]/g, c => 'ᴀʙᴄᴅᴇꜰɢʜɪᴊᴋʟᴍɴᴏᴘǫʀsᴛᴜᴠᴡxʏᴢ'[c.charCodeAt(0) - 97] || c);
+    }
+</script>
+
+<style>
+    textarea {
+        resize: none;
+        width: 49.89%;
+        height: 99.62%;
+    }
+</style>
